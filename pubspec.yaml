@@ -1,7 +1,7 @@
 name: multiscreen
-description: A new Flutter plugin.
-version: 0.0.1
-author:
+description: Support Multiscreen
+version: 1.0.0
+author: Daewook. Kwon<tossy@tossy.me>
 homepage:
 
 environment:
