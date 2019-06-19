@@ -1,8 +1,8 @@
 name: multiscreen
-description: Support Multiscreen
+description: Support multiscreen for mobile app.
 version: 1.0.0
 author: Daewook. Kwon<tossy@tossy.me>
-homepage:
+homepage: https://github.com/team-tossy/multiscreen
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
