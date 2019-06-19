@@ -1,6 +1,108 @@
 # multiscreen_example
 
-Demonstrates how to use the multiscreen plugin.
+How to use.
+
+    import 'package:flutter/material.dart';
+    import 'package:multiscreen/multiscreen.dart';
+    
+    void main() => runApp(MyApp());
+    
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          theme: ThemeData.light(),
+          home: _MyPage(),
+        );
+      }
+    }
+    
+    class _MyPage extends StatefulWidget {
+      @override
+      State<StatefulWidget> createState() {
+        return _MyPageState();
+      }
+    }
+    
+    class _MyPageState extends State<_MyPage> {
+      @override
+      Widget build(BuildContext context) {
+        /// init Multiscreen instance.
+        Multiscreen.init(context, 360);
+        return Container(
+          color: Colors.white,
+          /// resize using Multiscreen.
+          margin: EdgeInsets.only(top: Multiscreen.instance.resize(80)),
+          child: Align(
+            alignment: Alignment.center,
+            child: Column(children: <Widget>[
+              MaterialButton(
+                color: Colors.blue,
+                height: Multiscreen.instance.resize(40),
+                minWidth: Multiscreen.instance.resize(280),
+                child: Text(
+                  'text',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: Multiscreen.instance.resize(16)),
+                ),
+                onPressed: () {},
+              ),
+              MaterialButton(
+                color: Colors.blue,
+                height: Multiscreen.instance.resize(40),
+                minWidth: Multiscreen.instance.resize(300),
+                child: Text(
+                  'text',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: Multiscreen.instance.resize(16)),
+                ),
+                onPressed: () {},
+              ),
+              MaterialButton(
+                color: Colors.blue,
+                height: Multiscreen.instance.resize(40),
+                minWidth: Multiscreen.instance.resize(320),
+                child: Text(
+                  'text',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: Multiscreen.instance.resize(16)),
+                ),
+                onPressed: () {},
+              ),
+              MaterialButton(
+                color: Colors.blue,
+                height: Multiscreen.instance.resize(40),
+                minWidth: Multiscreen.instance.resize(340),
+                child: Text(
+                  'text',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: Multiscreen.instance.resize(16)),
+                ),
+                onPressed: () {},
+              ),
+              MaterialButton(
+                color: Colors.blue,
+                height: Multiscreen.instance.resize(40),
+                minWidth: Multiscreen.instance.resize(360),
+                child: Text(
+                  'text',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: Multiscreen.instance.resize(16)),
+                ),
+                onPressed: () {},
+              ),
+            ]),
+          ),
+        );
+      }
+    }
+
+
 
 ## Getting Started
 

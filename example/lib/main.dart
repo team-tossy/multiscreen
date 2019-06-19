@@ -23,9 +23,11 @@ class _MyPage extends StatefulWidget {
 class _MyPageState extends State<_MyPage> {
   @override
   Widget build(BuildContext context) {
+    /// init Multiscreen instance.
     Multiscreen.init(context, 360);
     return Container(
       color: Colors.white,
+      /// resize using Multiscreen.
       margin: EdgeInsets.only(top: Multiscreen.instance.resize(80)),
       child: Align(
         alignment: Alignment.center,
