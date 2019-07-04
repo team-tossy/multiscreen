@@ -1,4 +1,3 @@
-
 import 'package:flutter/widgets.dart';
 
 /// If you can not create a GUI guide for each resolution or device,
