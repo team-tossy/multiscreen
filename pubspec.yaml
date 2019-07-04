@@ -2,13 +2,12 @@ name: multiscreen
 description: Support multiscreen(different resolution and size of display) for mobile application.
 
 
-version: 1.0.3
+version: 1.0.4
 author: Daewook. Kwon<tossy@tossy.me>
 homepage: https://github.com/team-tossy/multiscreen
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
-  flutter: ^1.8.0
 
 dependencies:
   flutter:
