@@ -1,4 +1,3 @@
-package android
 
 group 'me.tossy.flutter.multiscreen'
 version '1.0-SNAPSHOT'
