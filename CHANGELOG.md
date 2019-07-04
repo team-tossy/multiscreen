@@ -1,3 +1,6 @@
+##1.0.5
+update gradle
+
 ##1.0.4
 fix conflict
 
