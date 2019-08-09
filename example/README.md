@@ -25,74 +25,75 @@ How to use.
     }
     
     class _MyPageState extends State<_MyPage> {
+      Multiscreen _multiscreen;
       @override
       Widget build(BuildContext context) {
         /// init Multiscreen instance.
-        Multiscreen.init(context, 360);
+        _multiscreen ??= Multiscreen.of(context, 360);
         return Container(
           color: Colors.white,
           /// resize using Multiscreen.
-          margin: EdgeInsets.only(top: Multiscreen.instance.resize(80)),
+          margin: EdgeInsets.only(top: _multiscreen.resize(80)),
           child: Align(
             alignment: Alignment.center,
             child: Column(children: <Widget>[
               MaterialButton(
                 color: Colors.blue,
-                height: Multiscreen.instance.resize(40),
-                minWidth: Multiscreen.instance.resize(280),
+                height: _multiscreen.resize(40),
+                minWidth: _multiscreen.resize(280),
                 child: Text(
                   'text',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: Multiscreen.instance.resize(16)),
+                      fontSize: _multiscreen.resize(16)),
                 ),
                 onPressed: () {},
               ),
               MaterialButton(
                 color: Colors.blue,
-                height: Multiscreen.instance.resize(40),
-                minWidth: Multiscreen.instance.resize(300),
+                height: _multiscreen.resize(40),
+                minWidth: _multiscreen.resize(300),
                 child: Text(
                   'text',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: Multiscreen.instance.resize(16)),
+                      fontSize: _multiscreen.resize(16)),
                 ),
                 onPressed: () {},
               ),
               MaterialButton(
                 color: Colors.blue,
-                height: Multiscreen.instance.resize(40),
-                minWidth: Multiscreen.instance.resize(320),
+                height: _multiscreen.resize(40),
+                minWidth: _multiscreen.resize(320),
                 child: Text(
                   'text',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: Multiscreen.instance.resize(16)),
+                      fontSize: _multiscreen.resize(16)),
                 ),
                 onPressed: () {},
               ),
               MaterialButton(
                 color: Colors.blue,
-                height: Multiscreen.instance.resize(40),
-                minWidth: Multiscreen.instance.resize(340),
+                height: _multiscreen.resize(40),
+                minWidth: _multiscreen.resize(340),
                 child: Text(
                   'text',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: Multiscreen.instance.resize(16)),
+                      fontSize: _multiscreen.resize(16)),
                 ),
                 onPressed: () {},
               ),
               MaterialButton(
                 color: Colors.blue,
-                height: Multiscreen.instance.resize(40),
-                minWidth: Multiscreen.instance.resize(360),
+                height: _multiscreen.resize(40),
+                minWidth: _multiscreen.resize(360),
                 child: Text(
                   'text',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: Multiscreen.instance.resize(16)),
+                      fontSize: _multiscreen.resize(16)),
                 ),
                 onPressed: () {},
               ),
@@ -101,8 +102,6 @@ How to use.
         );
       }
     }
-
-
 
 ## Getting Started
 

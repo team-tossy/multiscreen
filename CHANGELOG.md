@@ -1,3 +1,6 @@
+##1.0.6
+remove Singleton.
+
 ##1.0.5
 update gradle
 
