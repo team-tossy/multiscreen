@@ -1,3 +1,6 @@
+##1.1.0
+change how to use.
+
 ##1.0.6
 remove Singleton.
 
