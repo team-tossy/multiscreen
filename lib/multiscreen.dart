@@ -1,35 +1,34 @@
-import 'package:flutter/widgets.dart';
+import 'dart:ui' as ui;
 
 /// If you can not create a GUI guide for each resolution or device,
 /// you can create one GUI guide and use Multiscreen for development.
-class Multiscreen {
-  int _guideWidth;
-  double _screenWidth = 0;
+///
 
-  Multiscreen(BuildContext context, int guideWidth) {
-    _guideWidth = guideWidth;
-    _screenWidth = MediaQuery.of(context).size.width;
+double resize(double origin, {double guideSize = 360}) {
+  if (guideSize == null) {
+    throw Exception('init Multiscreen');
   }
 
-  /// @param context
-  /// - to get context of application.
-  /// @param guideWidth
-  /// - guide device width.
-  factory Multiscreen.of(BuildContext context, int guideWidth) {
-    return Multiscreen(context, guideWidth);
+  if (guideSize <= 0) {
+    throw Exception('make sure the guide size is more than 0');
   }
 
-  /// resize size in gui-guideline to fit devices
-  double resize(double origin) {
-    if (_guideWidth <= 0) {
-      throw Exception;
-    }
-    if (_screenWidth == 0) {
-      return origin;
-    }
+  return origin._resize(guideSize: guideSize);
+}
 
-    double ret = (_screenWidth / _guideWidth) * origin;
-
-    return ret;
+extension Resize on double {
+  double _resize({double guideSize = 360}) {
+    return ((ui.window.physicalSize.width / ui.window.devicePixelRatio) /
+            guideSize) *
+        this;
   }
+
+  double get resize320 {
+    return ((ui.window.physicalSize.width / ui.window.devicePixelRatio) / 320) *
+        this;
+  }
+
+  double get resize360 =>
+      ((ui.window.physicalSize.width / ui.window.devicePixelRatio) / 360) *
+      this;
 }
