@@ -21,8 +21,10 @@ class _MyPage extends StatefulWidget {
 }
 
 class _MyPageState extends State<_MyPage> {
+
   @override
   Widget build(BuildContext context) {
+    debugPrint('resize(20) = ${resize(20)}');
     return Container(
       color: Colors.white,
       /// resize using Multiscreen.
