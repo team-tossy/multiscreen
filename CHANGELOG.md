@@ -1,3 +1,6 @@
+##1.2.0
+support rotate screen
+
 ##1.1.0
 change how to use.
 
