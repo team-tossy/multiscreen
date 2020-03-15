@@ -1,6 +1,6 @@
 name: multiscreen
 description: Support multiscreen(different resolution and size of display) for mobile application.
-version: 1.2.0
+version: 1.2.1
 author: Daewook. Kwon<tossy@tossy.me>
 homepage: https://github.com/team-tossy/multiscreen
 

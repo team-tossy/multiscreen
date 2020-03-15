@@ -23,7 +23,7 @@ extension Resize on double {
     double width = ui.window.physicalSize.width;
     double height = ui.window.physicalSize.height;
     double basis = width <= height ? width : height;
-    debugPrint('_resize : width = $width, height = $height, basis = $basis');
+
     return ((basis / ui.window.devicePixelRatio) / guideSize) * this;
   }
 

@@ -1,3 +1,6 @@
+##1.2.1
+remove debug print
+
 ##1.2.0
 support rotate screen
 
