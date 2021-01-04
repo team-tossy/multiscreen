@@ -1,3 +1,7 @@
+##1.3.0
+- add some options as dp size
+- if guide size is null, return origin input.
+
 ##1.2.1
 remove debug print
 
