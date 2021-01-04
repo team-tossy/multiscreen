@@ -1,18 +1,12 @@
 import 'dart:ui' as ui;
 
-import 'package:flutter/foundation.dart';
-
 /// If you can not create a GUI guide for each resolution or device,
 /// you can create one GUI guide and use Multiscreen for development.
 ///
 
-double resize(double origin, {double guideSize = 360}) {
+double resize(double origin, {double guideSize}) {
   if (guideSize == null) {
-    throw Exception('init Multiscreen');
-  }
-
-  if (guideSize <= 0) {
-    throw Exception('make sure the guide size is more than 0');
+    return origin;
   }
 
   return origin._resize(guideSize: guideSize);
@@ -32,6 +26,18 @@ extension Resize on double {
   }
 
   double get resize360 {
-    return _resize();
+    return _resize(guideSize: 360);
+  }
+
+  double get resize375 {
+    return _resize(guideSize: 375);
+  }
+
+  double get resize411 {
+    return _resize(guideSize: 411);
+  }
+
+  double get resize414 {
+    return _resize(guideSize: 414);
   }
 }
